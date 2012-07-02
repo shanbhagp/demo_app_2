@@ -1,11 +1,13 @@
 DemoApp2::Application.routes.draw do
+  resources :microposts
+
   resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
-   match '/users' => 'users#index'
+   ## match 'users' => 'users#index'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
@@ -50,7 +52,7 @@ DemoApp2::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   # root :to => 'welcome#index'
+   root :to => 'users#index'
 
   # See how all your routes lay out with "rake routes"
 
